@@ -1,0 +1,6 @@
+const PARTIALLY_FILLED = 'PARTIALLY_FILLED';
+const FILLED = 'FILLED';
+const SELL = 'SELL';
+const BUY = 'BUY';
+
+module.exports = { PARTIALLY_FILLED, FILLED, SELL, BUY }
