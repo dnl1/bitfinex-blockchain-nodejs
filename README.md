@@ -15,6 +15,9 @@ const owner = 'bitfinex'
 const baseOrder = { coin: 'ETHUSD', qty: 100, price: 10, side: 'BUY', owner: owner };
 ```
 
+## Missing
+* Unit Tests
+* Maybe a best approach for PubSub
 
 Hi and congratulations to your progress with Bitfinex!
 
