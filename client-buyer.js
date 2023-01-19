@@ -27,7 +27,7 @@ peerSub.sub('trade_service', { timeout: 10000 })
 
 peerSub.on('message', (msg) => {
   const book = JSON.parse(msg);
-  const myBook = book.filter(b => b.owner = owner);
+  const myBook = book.filter(b => b.owner === owner);
   orderService.saveBook(myBook);
 });
 
