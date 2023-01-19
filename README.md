@@ -1,14 +1,14 @@
 # The BFX challenge
 
 To run this test, you need first need to run
-
+````
 node server.js
-
+````
 then you'll raise scripts using the test scenarios
-
+````
 node client-seller.js
 node client-buyer.js
-
+````
 These lines are the order, so just modify it to test the scenarios
 ```js
 const owner = 'bitfinex'
