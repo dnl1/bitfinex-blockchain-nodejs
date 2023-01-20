@@ -50,10 +50,6 @@ class OrderService {
         this.repository.saveBook(book)
     }
 
-    getCustomerBook() {
-        return this.repository.getBook();
-    }
-
     getById(orderId){
         return this.repository.getById(orderId);
     }
