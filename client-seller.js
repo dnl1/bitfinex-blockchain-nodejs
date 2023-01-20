@@ -32,9 +32,9 @@ peerSub.on('message', (msg) => {
 });
 
 const owner = 'danilo'
-const baseOrder = { coin: 'ETHUSD', qty: 100, price: 10, side: 'SELL', owner: owner };
+const order = { coin: 'ETHUSD', qty: 100, price: 10, side: 'SELL', owner: owner };
 
-peer.request('order_service', baseOrder, { timeout: 10000 }, (err, data) => {
+peer.request('order_service', order, { timeout: 10000 }, (err, data) => {
   if (err) {
     console.error(err)
     process.exit(-1)

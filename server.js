@@ -8,8 +8,7 @@ const OrderRepository = require('./repositories/orderRepository');
 const OrderService = require('./services/orderService');
 const TradeService = require('./services/tradeService');
 
-const { PARTIALLY_FILLED, FILLED } = require('./constants');
-
+//using di, lifecycle as singleton
 const orderRepository = new OrderRepository();
 const orderService = new OrderService(orderRepository);
 const tradeService = new TradeService(orderService);
@@ -45,7 +44,6 @@ setInterval(function () {
   tradeService.doMatches();
 }, 5000)
 
-
 //publisher
 setInterval(function() {
   let book = orderService.getBook();
@@ -68,12 +66,3 @@ service.on('request', (rid, key, payload, handler) => {
 
   handler.reply(null, { success: true, order: order, type: 'request' });
 })
-
-  // const order = orderService.getById(payload.id);
-  // handler.reply(null, { success: true, order: order, type: 'watchdog' });
-
-  // /*watch the order*/
-  // if(!watchers.includes(key)){
-  //   // responds that im watching
-  //   // need to get filleds from the key
-  // }
