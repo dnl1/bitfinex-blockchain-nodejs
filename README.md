@@ -1,6 +1,6 @@
 # The BFX challenge
 
-To run this test, you need first need to run
+To run this test, you first need to run
 ````
 node server.js
 ````
