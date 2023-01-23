@@ -1,6 +1,19 @@
 # The BFX challenge
 
-To run this test, you first need to run
+### Setting up the DHT
+
+```
+npm i -g grenache-grape
+```
+
+```
+# boot two grape servers
+
+grape --dp 20001 --aph 30001 --bn '127.0.0.1:20002'
+grape --dp 20002 --aph 40001 --bn '127.0.0.1:20001'
+```
+
+then you need to run
 ````
 node server.js
 ````
